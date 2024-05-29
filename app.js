@@ -11,7 +11,7 @@ const studentRouter = require("./routes/student");
 const adminRouter = require("./routes/admin");
 const headRouter = require("./routes/head");
 const coursesRouter = require("./routes/courses");
-
+const classRouter = require('./routes/class');
 const app = express();
 
 // Load environment variables from .env file
@@ -54,6 +54,7 @@ app.use("/admin", adminRouter);
 app.use("/student", studentRouter);
 app.use("/head", headRouter);
 app.use("/courses", coursesRouter);
+app.use("/classes", classRouter);
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
